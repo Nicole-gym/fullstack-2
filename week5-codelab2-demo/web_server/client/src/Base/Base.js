@@ -7,7 +7,7 @@ import React from 'react';
 
 import './Base.css'
 
-const Base = {{children}} => (
+const Base = ({children}) => (
   <div>
     <nav className="nav-bar indigo lighten-1">
       <div className="nav-wrapper">

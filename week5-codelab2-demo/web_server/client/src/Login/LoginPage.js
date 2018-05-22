@@ -28,7 +28,7 @@ class LoginPage extends React.Component{
     console.log('email:', email);
     console.log('password', password);
 
-    // TODO:
+    // post login data
   }
 
   changeUser(event){
