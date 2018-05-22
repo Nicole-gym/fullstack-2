@@ -1,5 +1,5 @@
 class Auth {
-  static authenticaeUser(token, email){
+  static authenticateUser(token, email){
     localStorage.setItem('token', token);
     localStorage.setItem('email', email);
   }

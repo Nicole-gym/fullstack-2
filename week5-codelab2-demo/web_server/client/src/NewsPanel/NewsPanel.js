@@ -2,6 +2,7 @@ import './NewsPanel.css';
 
 import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
+import Auth from '../Auth/Auth';
 
 import _ from 'lodash';
 
@@ -48,7 +49,13 @@ handleScroll(){
     console.log("loadMoreNews");
 
     const news_url='http://'+ window.location.hostname+':3000'+'/news';
-    const request = new Request(news_url,{method:'GET'});
+    const request = new Request(news_url,{
+      method:'GET',
+      headers:{
+        'Authorization':'bearer ' + Auth.getToken(),
+      }
+
+    });
 
     fetch(request)
       .then(res => res.json())
